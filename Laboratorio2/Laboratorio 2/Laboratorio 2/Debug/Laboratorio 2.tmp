@@ -1,0 +1,44 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio2\Laboratorio 2\Laboratorio 2\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio2\Laboratorio 2\Laboratorio 2\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\M328Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio2\Laboratorio 2\Laboratorio 2\Debug\Laboratorio 2.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Laboratorio 2.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Laboratorio 2.map</FILE>
+  <FILE>Laboratorio 2.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <TABLA7SEG><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio2\Laboratorio 2\Laboratorio 2\main.asm</FILE><LINE>13</LINE></TABLA7SEG>
+  <SETUP><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio2\Laboratorio 2\Laboratorio 2\main.asm</FILE><LINE>21</LINE></SETUP>
+  <INICIAL><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio2\Laboratorio 2\Laboratorio 2\main.asm</FILE><LINE>94</LINE></INICIAL>
+  <MAIN><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio2\Laboratorio 2\Laboratorio 2\main.asm</FILE><LINE>59</LINE></MAIN>
+  <SEG7><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio2\Laboratorio 2\Laboratorio 2\main.asm</FILE><LINE>75</LINE></SEG7>
+  <COMP><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio2\Laboratorio 2\Laboratorio 2\main.asm</FILE><LINE>134</LINE></COMP>
+  <ConTIMER0><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio2\Laboratorio 2\Laboratorio 2\main.asm</FILE><LINE>100</LINE></ConTIMER0>
+  <DELAY><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio2\Laboratorio 2\Laboratorio 2\main.asm</FILE><LINE>145</LINE></DELAY>
+  <INCREMET><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio2\Laboratorio 2\Laboratorio 2\main.asm</FILE><LINE>110</LINE></INCREMET>
+  <DECREMT><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio2\Laboratorio 2\Laboratorio 2\main.asm</FILE><LINE>122</LINE></DECREMT>
+  <OVER1><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio2\Laboratorio 2\Laboratorio 2\main.asm</FILE><LINE>106</LINE></OVER1>
+  <OVER><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio2\Laboratorio 2\Laboratorio 2\main.asm</FILE><LINE>119</LINE></OVER>
+  <UNDER><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio2\Laboratorio 2\Laboratorio 2\main.asm</FILE><LINE>128</LINE></UNDER>
+  <ALARM><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio2\Laboratorio 2\Laboratorio 2\main.asm</FILE><LINE>139</LINE></ALARM>
+  <SUB_DELAY1><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio2\Laboratorio 2\Laboratorio 2\main.asm</FILE><LINE>147</LINE></SUB_DELAY1>
+  <SUB_DELAY2><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio2\Laboratorio 2\Laboratorio 2\main.asm</FILE><LINE>152</LINE></SUB_DELAY2>
+  <SUB_DELAY3><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio2\Laboratorio 2\Laboratorio 2\main.asm</FILE><LINE>157</LINE></SUB_DELAY3>
+ </LABELS>
+</ASSEMBLER_INFO>

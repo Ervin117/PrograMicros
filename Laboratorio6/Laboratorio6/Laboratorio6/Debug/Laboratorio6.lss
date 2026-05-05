@@ -1,0 +1,510 @@
+
+Laboratorio6.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000008a  00800100  0000031a  0000038e  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000031a  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  00000418  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000448  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000070  00000000  00000000  00000488  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000a01  00000000  00000000  000004f8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000728  00000000  00000000  00000ef9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000003d0  00000000  00000000  00001621  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000138  00000000  00000000  000019f4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000004a0  00000000  00000000  00001b2c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000002e6  00000000  00000000  00001fcc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000060  00000000  00000000  000022b2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+   8:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+   c:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  10:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  14:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  18:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  1c:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  20:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  24:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  28:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  2c:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  30:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  34:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  38:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  3c:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  40:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  44:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  48:	0c 94 40 01 	jmp	0x280	; 0x280 <__vector_18>
+  4c:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  50:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  54:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  58:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  5c:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  60:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  64:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+
+00000074 <__do_copy_data>:
+  74:	11 e0       	ldi	r17, 0x01	; 1
+  76:	a0 e0       	ldi	r26, 0x00	; 0
+  78:	b1 e0       	ldi	r27, 0x01	; 1
+  7a:	ea e1       	ldi	r30, 0x1A	; 26
+  7c:	f3 e0       	ldi	r31, 0x03	; 3
+  7e:	02 c0       	rjmp	.+4      	; 0x84 <__do_copy_data+0x10>
+  80:	05 90       	lpm	r0, Z+
+  82:	0d 92       	st	X+, r0
+  84:	aa 38       	cpi	r26, 0x8A	; 138
+  86:	b1 07       	cpc	r27, r17
+  88:	d9 f7       	brne	.-10     	; 0x80 <__do_copy_data+0xc>
+  8a:	0e 94 b2 00 	call	0x164	; 0x164 <main>
+  8e:	0c 94 8b 01 	jmp	0x316	; 0x316 <_exit>
+
+00000092 <__bad_interrupt>:
+  92:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000096 <_Z10serialUARTv>:
+	UDR0 = letra; 
+	
+}
+void mostrarLect(char dato)
+{
+	PORTB = dato; 
+  96:	8a b1       	in	r24, 0x0a	; 10
+  98:	82 60       	ori	r24, 0x02	; 2
+  9a:	8a b9       	out	0x0a, r24	; 10
+  9c:	8a b1       	in	r24, 0x0a	; 10
+  9e:	8e 7f       	andi	r24, 0xFE	; 254
+  a0:	8a b9       	out	0x0a, r24	; 10
+  a2:	e1 ec       	ldi	r30, 0xC1	; 193
+  a4:	f0 e0       	ldi	r31, 0x00	; 0
+  a6:	80 81       	ld	r24, Z
+  a8:	88 69       	ori	r24, 0x98	; 152
+  aa:	80 83       	st	Z, r24
+  ac:	e2 ec       	ldi	r30, 0xC2	; 194
+  ae:	f0 e0       	ldi	r31, 0x00	; 0
+  b0:	80 81       	ld	r24, Z
+  b2:	86 60       	ori	r24, 0x06	; 6
+  b4:	80 83       	st	Z, r24
+  b6:	87 e6       	ldi	r24, 0x67	; 103
+  b8:	90 e0       	ldi	r25, 0x00	; 0
+  ba:	90 93 c5 00 	sts	0x00C5, r25	; 0x8000c5 <__TEXT_REGION_LENGTH__+0x7f80c5>
+  be:	80 93 c4 00 	sts	0x00C4, r24	; 0x8000c4 <__TEXT_REGION_LENGTH__+0x7f80c4>
+  c2:	08 95       	ret
+
+000000c4 <_Z10serialLECTc>:
+  c4:	90 91 c0 00 	lds	r25, 0x00C0	; 0x8000c0 <__TEXT_REGION_LENGTH__+0x7f80c0>
+  c8:	95 ff       	sbrs	r25, 5
+  ca:	fc cf       	rjmp	.-8      	; 0xc4 <_Z10serialLECTc>
+  cc:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7f80c6>
+  d0:	08 95       	ret
+
+000000d2 <_Z11stringTermiPc>:
+}
+
+void stringTermi(char* oracion)
+{
+  d2:	0f 93       	push	r16
+  d4:	1f 93       	push	r17
+  d6:	cf 93       	push	r28
+  d8:	8c 01       	movw	r16, r24
+	for (uint8_t i = 0; *(oracion+i) != '\0'; i++)
+  da:	c0 e0       	ldi	r28, 0x00	; 0
+  dc:	f8 01       	movw	r30, r16
+  de:	ec 0f       	add	r30, r28
+  e0:	f1 1d       	adc	r31, r1
+  e2:	80 81       	ld	r24, Z
+  e4:	88 23       	and	r24, r24
+  e6:	21 f0       	breq	.+8      	; 0xf0 <_Z11stringTermiPc+0x1e>
+	{
+		serialLECT(*(oracion+i));
+  e8:	0e 94 62 00 	call	0xc4	; 0xc4 <_Z10serialLECTc>
+	PORTB = dato; 
+}
+
+void stringTermi(char* oracion)
+{
+	for (uint8_t i = 0; *(oracion+i) != '\0'; i++)
+  ec:	cf 5f       	subi	r28, 0xFF	; 255
+  ee:	f6 cf       	rjmp	.-20     	; 0xdc <_Z11stringTermiPc+0xa>
+	{
+		serialLECT(*(oracion+i));
+	}
+}
+  f0:	cf 91       	pop	r28
+  f2:	1f 91       	pop	r17
+  f4:	0f 91       	pop	r16
+  f6:	08 95       	ret
+
+000000f8 <_Z5ADC_1v>:
+
+void ADC_1()
+{
+	//ADMUX = 0;
+	ADMUX |= (1<<REFS0) | (1 << MUX0) |  (1 << MUX1) | (1<<MUX2); // | (1<<ADLAR)
+  f8:	ec e7       	ldi	r30, 0x7C	; 124
+  fa:	f0 e0       	ldi	r31, 0x00	; 0
+  fc:	80 81       	ld	r24, Z
+  fe:	87 64       	ori	r24, 0x47	; 71
+ 100:	80 83       	st	Z, r24
+	
+	//ADCSRA = 0;
+	ADCSRA |= (1<<ADPS0) | (1<<ADPS1) | (1<<ADPS2) | (1<<ADEN);// |  (1<<ADIE) ;
+ 102:	ea e7       	ldi	r30, 0x7A	; 122
+ 104:	f0 e0       	ldi	r31, 0x00	; 0
+ 106:	80 81       	ld	r24, Z
+ 108:	87 68       	ori	r24, 0x87	; 135
+ 10a:	80 83       	st	Z, r24
+	ADCSRA |= (1<<ADSC);
+ 10c:	80 81       	ld	r24, Z
+ 10e:	80 64       	ori	r24, 0x40	; 64
+ 110:	80 83       	st	Z, r24
+ 112:	08 95       	ret
+
+00000114 <_Z5setupv>:
+
+/****************************************/
+// NON-Interrupt subroutines
+void setup()
+{
+	cli(); 
+ 114:	f8 94       	cli
+	DDRB = 0xFF; 
+ 116:	8f ef       	ldi	r24, 0xFF	; 255
+ 118:	84 b9       	out	0x04, r24	; 4
+	serialUART();
+ 11a:	0e 94 4b 00 	call	0x96	; 0x96 <_Z10serialUARTv>
+	ADC_1(); 
+ 11e:	0e 94 7c 00 	call	0xf8	; 0xf8 <_Z5ADC_1v>
+	sei();
+ 122:	78 94       	sei
+ 124:	08 95       	ret
+
+00000126 <_Z6lecADCv>:
+	ADCSRA |= (1<<ADSC);
+}
+
+uint16_t lecADC()
+{
+	ADCSRA |= (1<<ADSC); //Empezar conversión
+ 126:	ea e7       	ldi	r30, 0x7A	; 122
+ 128:	f0 e0       	ldi	r31, 0x00	; 0
+ 12a:	80 81       	ld	r24, Z
+ 12c:	80 64       	ori	r24, 0x40	; 64
+ 12e:	80 83       	st	Z, r24
+	while (ADCSRA & (1<<ADSC)); 
+ 130:	80 91 7a 00 	lds	r24, 0x007A	; 0x80007a <__TEXT_REGION_LENGTH__+0x7f807a>
+ 134:	86 fd       	sbrc	r24, 6
+ 136:	fc cf       	rjmp	.-8      	; 0x130 <_Z6lecADCv+0xa>
+	return ADC; //Leer los valores altos
+ 138:	80 91 78 00 	lds	r24, 0x0078	; 0x800078 <__TEXT_REGION_LENGTH__+0x7f8078>
+ 13c:	90 91 79 00 	lds	r25, 0x0079	; 0x800079 <__TEXT_REGION_LENGTH__+0x7f8079>
+}
+ 140:	08 95       	ret
+
+00000142 <_Z4menuv>:
+
+void menu()
+{
+	stringTermi("\n\nMenu:\n");
+ 142:	80 e0       	ldi	r24, 0x00	; 0
+ 144:	91 e0       	ldi	r25, 0x01	; 1
+ 146:	0e 94 69 00 	call	0xd2	; 0xd2 <_Z11stringTermiPc>
+	stringTermi("1. Leer Potenciometro\n");
+ 14a:	89 e0       	ldi	r24, 0x09	; 9
+ 14c:	91 e0       	ldi	r25, 0x01	; 1
+ 14e:	0e 94 69 00 	call	0xd2	; 0xd2 <_Z11stringTermiPc>
+	stringTermi("2. Enviar ASCII\n");
+ 152:	80 e2       	ldi	r24, 0x20	; 32
+ 154:	91 e0       	ldi	r25, 0x01	; 1
+ 156:	0e 94 69 00 	call	0xd2	; 0xd2 <_Z11stringTermiPc>
+	stringTermi("Seleccione una opcion:\n");
+ 15a:	81 e3       	ldi	r24, 0x31	; 49
+ 15c:	91 e0       	ldi	r25, 0x01	; 1
+ 15e:	0e 94 69 00 	call	0xd2	; 0xd2 <_Z11stringTermiPc>
+ 162:	08 95       	ret
+
+00000164 <main>:
+
+/****************************************/
+// Main Function
+int main (void)
+{
+	setup();
+ 164:	0e 94 8a 00 	call	0x114	; 0x114 <_Z5setupv>
+	serialLECT('E');
+ 168:	85 e4       	ldi	r24, 0x45	; 69
+ 16a:	0e 94 62 00 	call	0xc4	; 0xc4 <_Z10serialLECTc>
+	serialLECT('G');
+ 16e:	87 e4       	ldi	r24, 0x47	; 71
+ 170:	0e 94 62 00 	call	0xc4	; 0xc4 <_Z10serialLECTc>
+	serialLECT('3');
+ 174:	83 e3       	ldi	r24, 0x33	; 51
+ 176:	0e 94 62 00 	call	0xc4	; 0xc4 <_Z10serialLECTc>
+	stringTermi("\n El delay es del diablo");
+ 17a:	89 e4       	ldi	r24, 0x49	; 73
+ 17c:	91 e0       	ldi	r25, 0x01	; 1
+ 17e:	0e 94 69 00 	call	0xd2	; 0xd2 <_Z11stringTermiPc>
+	menu();
+ 182:	0e 94 a1 00 	call	0x142	; 0x142 <_Z4menuv>
+ 186:	ff cf       	rjmp	.-2      	; 0x186 <main+0x22>
+
+00000188 <_Z3numj>:
+	stringTermi("2. Enviar ASCII\n");
+	stringTermi("Seleccione una opcion:\n");
+}
+
+void num(uint16_t numero)
+{
+ 188:	ef 92       	push	r14
+ 18a:	ff 92       	push	r15
+ 18c:	0f 93       	push	r16
+ 18e:	1f 93       	push	r17
+ 190:	cf 93       	push	r28
+ 192:	ac 01       	movw	r20, r24
+	//se separa el numero sus cifras correspondientes
+	uint16_t miles = numero / 1000; 
+ 194:	8c 01       	movw	r16, r24
+ 196:	16 95       	lsr	r17
+ 198:	07 95       	ror	r16
+ 19a:	16 95       	lsr	r17
+ 19c:	07 95       	ror	r16
+ 19e:	16 95       	lsr	r17
+ 1a0:	07 95       	ror	r16
+ 1a2:	98 01       	movw	r18, r16
+ 1a4:	a5 ec       	ldi	r26, 0xC5	; 197
+ 1a6:	b0 e2       	ldi	r27, 0x20	; 32
+ 1a8:	0e 94 7c 01 	call	0x2f8	; 0x2f8 <__umulhisi3>
+ 1ac:	fc 01       	movw	r30, r24
+ 1ae:	f2 95       	swap	r31
+ 1b0:	e2 95       	swap	r30
+ 1b2:	ef 70       	andi	r30, 0x0F	; 15
+ 1b4:	ef 27       	eor	r30, r31
+ 1b6:	ff 70       	andi	r31, 0x0F	; 15
+ 1b8:	ef 27       	eor	r30, r31
+	uint8_t centenas = (numero % 1000)/100; //saber centenas
+ 1ba:	28 ee       	ldi	r18, 0xE8	; 232
+ 1bc:	33 e0       	ldi	r19, 0x03	; 3
+ 1be:	e2 9f       	mul	r30, r18
+ 1c0:	c0 01       	movw	r24, r0
+ 1c2:	e3 9f       	mul	r30, r19
+ 1c4:	90 0d       	add	r25, r0
+ 1c6:	f2 9f       	mul	r31, r18
+ 1c8:	90 0d       	add	r25, r0
+ 1ca:	11 24       	eor	r1, r1
+ 1cc:	9a 01       	movw	r18, r20
+ 1ce:	28 1b       	sub	r18, r24
+ 1d0:	39 0b       	sbc	r19, r25
+ 1d2:	36 95       	lsr	r19
+ 1d4:	27 95       	ror	r18
+ 1d6:	36 95       	lsr	r19
+ 1d8:	27 95       	ror	r18
+ 1da:	ab e7       	ldi	r26, 0x7B	; 123
+ 1dc:	b4 e1       	ldi	r27, 0x14	; 20
+ 1de:	0e 94 7c 01 	call	0x2f8	; 0x2f8 <__umulhisi3>
+ 1e2:	7c 01       	movw	r14, r24
+ 1e4:	f6 94       	lsr	r15
+ 1e6:	e7 94       	ror	r14
+	uint8_t decenas = (numero % 100) / 100; //saber decenas
+ 1e8:	9a 01       	movw	r18, r20
+ 1ea:	36 95       	lsr	r19
+ 1ec:	27 95       	ror	r18
+ 1ee:	36 95       	lsr	r19
+ 1f0:	27 95       	ror	r18
+ 1f2:	0e 94 7c 01 	call	0x2f8	; 0x2f8 <__umulhisi3>
+ 1f6:	96 95       	lsr	r25
+ 1f8:	87 95       	ror	r24
+ 1fa:	64 e6       	ldi	r22, 0x64	; 100
+ 1fc:	68 9f       	mul	r22, r24
+ 1fe:	90 01       	movw	r18, r0
+ 200:	69 9f       	mul	r22, r25
+ 202:	30 0d       	add	r19, r0
+ 204:	11 24       	eor	r1, r1
+ 206:	ca 01       	movw	r24, r20
+ 208:	82 1b       	sub	r24, r18
+ 20a:	93 0b       	sbc	r25, r19
+ 20c:	9c 01       	movw	r18, r24
+ 20e:	36 95       	lsr	r19
+ 210:	27 95       	ror	r18
+ 212:	36 95       	lsr	r19
+ 214:	27 95       	ror	r18
+ 216:	0e 94 7c 01 	call	0x2f8	; 0x2f8 <__umulhisi3>
+ 21a:	8c 01       	movw	r16, r24
+ 21c:	16 95       	lsr	r17
+ 21e:	07 95       	ror	r16
+	uint8_t unidades = numero % 10;	//saber unidades
+ 220:	9a 01       	movw	r18, r20
+ 222:	ad ec       	ldi	r26, 0xCD	; 205
+ 224:	bc ec       	ldi	r27, 0xCC	; 204
+ 226:	0e 94 7c 01 	call	0x2f8	; 0x2f8 <__umulhisi3>
+ 22a:	96 95       	lsr	r25
+ 22c:	87 95       	ror	r24
+ 22e:	96 95       	lsr	r25
+ 230:	87 95       	ror	r24
+ 232:	96 95       	lsr	r25
+ 234:	87 95       	ror	r24
+ 236:	9c 01       	movw	r18, r24
+ 238:	22 0f       	add	r18, r18
+ 23a:	33 1f       	adc	r19, r19
+ 23c:	88 0f       	add	r24, r24
+ 23e:	99 1f       	adc	r25, r25
+ 240:	88 0f       	add	r24, r24
+ 242:	99 1f       	adc	r25, r25
+ 244:	88 0f       	add	r24, r24
+ 246:	99 1f       	adc	r25, r25
+ 248:	82 0f       	add	r24, r18
+ 24a:	93 1f       	adc	r25, r19
+ 24c:	c4 2f       	mov	r28, r20
+ 24e:	c8 1b       	sub	r28, r24
+	
+	//Es el punto de origen del conteo
+	if (miles >0)
+ 250:	30 97       	sbiw	r30, 0x00	; 0
+ 252:	21 f0       	breq	.+8      	; 0x25c <_Z3numj+0xd4>
+	{
+		serialLECT(miles + '0');
+ 254:	80 e3       	ldi	r24, 0x30	; 48
+ 256:	8e 0f       	add	r24, r30
+ 258:	0e 94 62 00 	call	0xc4	; 0xc4 <_Z10serialLECTc>
+	}
+	serialLECT(centenas + '0');
+ 25c:	80 e3       	ldi	r24, 0x30	; 48
+ 25e:	8e 0d       	add	r24, r14
+ 260:	0e 94 62 00 	call	0xc4	; 0xc4 <_Z10serialLECTc>
+	serialLECT(decenas + '0');
+ 264:	80 e3       	ldi	r24, 0x30	; 48
+ 266:	80 0f       	add	r24, r16
+ 268:	0e 94 62 00 	call	0xc4	; 0xc4 <_Z10serialLECTc>
+	serialLECT(unidades + '0');
+ 26c:	80 e3       	ldi	r24, 0x30	; 48
+ 26e:	8c 0f       	add	r24, r28
+ 270:	0e 94 62 00 	call	0xc4	; 0xc4 <_Z10serialLECTc>
+}
+ 274:	cf 91       	pop	r28
+ 276:	1f 91       	pop	r17
+ 278:	0f 91       	pop	r16
+ 27a:	ff 90       	pop	r15
+ 27c:	ef 90       	pop	r14
+ 27e:	08 95       	ret
+
+00000280 <__vector_18>:
+/****************************************/
+// Interrupt routines
+ISR(USART_RX_vect)
+{
+ 280:	1f 92       	push	r1
+ 282:	0f 92       	push	r0
+ 284:	0f b6       	in	r0, 0x3f	; 63
+ 286:	0f 92       	push	r0
+ 288:	11 24       	eor	r1, r1
+ 28a:	2f 93       	push	r18
+ 28c:	3f 93       	push	r19
+ 28e:	4f 93       	push	r20
+ 290:	5f 93       	push	r21
+ 292:	6f 93       	push	r22
+ 294:	7f 93       	push	r23
+ 296:	8f 93       	push	r24
+ 298:	9f 93       	push	r25
+ 29a:	af 93       	push	r26
+ 29c:	bf 93       	push	r27
+ 29e:	ef 93       	push	r30
+ 2a0:	ff 93       	push	r31
+	//mostrarLect(UDR0);
+	uint8_t opcion = UDR0; // Capturar dato recibido
+ 2a2:	80 91 c6 00 	lds	r24, 0x00C6	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7f80c6>
+
+	if (opcion == '1')
+ 2a6:	81 33       	cpi	r24, 0x31	; 49
+ 2a8:	49 f4       	brne	.+18     	; 0x2bc <__vector_18+0x3c>
+	{
+		uint16_t lectura = lecADC(); // Leer ADC7
+ 2aa:	0e 94 93 00 	call	0x126	; 0x126 <_Z6lecADCv>
+		num(lectura); // Enviar como carácter ASCII
+ 2ae:	0e 94 c4 00 	call	0x188	; 0x188 <_Z3numj>
+		stringTermi("\n"); // Nueva línea para orden
+ 2b2:	84 e7       	ldi	r24, 0x74	; 116
+ 2b4:	91 e0       	ldi	r25, 0x01	; 1
+ 2b6:	0e 94 69 00 	call	0xd2	; 0xd2 <_Z11stringTermiPc>
+ 2ba:	0b c0       	rjmp	.+22     	; 0x2d2 <__vector_18+0x52>
+	}
+	else if (opcion == '2')
+ 2bc:	82 33       	cpi	r24, 0x32	; 50
+ 2be:	29 f4       	brne	.+10     	; 0x2ca <__vector_18+0x4a>
+	{
+		stringTermi("\nEnviando ASCII...\n");
+ 2c0:	82 e6       	ldi	r24, 0x62	; 98
+ 2c2:	91 e0       	ldi	r25, 0x01	; 1
+ 2c4:	0e 94 69 00 	call	0xd2	; 0xd2 <_Z11stringTermiPc>
+ 2c8:	04 c0       	rjmp	.+8      	; 0x2d2 <__vector_18+0x52>
+	}
+	else
+	{
+		stringTermi("\nOpcion invalida.\n");
+ 2ca:	86 e7       	ldi	r24, 0x76	; 118
+ 2cc:	91 e0       	ldi	r25, 0x01	; 1
+ 2ce:	0e 94 69 00 	call	0xd2	; 0xd2 <_Z11stringTermiPc>
+	}
+	
+	menu(); // Volver a mostrar el menu
+ 2d2:	0e 94 a1 00 	call	0x142	; 0x142 <_Z4menuv>
+ 2d6:	ff 91       	pop	r31
+ 2d8:	ef 91       	pop	r30
+ 2da:	bf 91       	pop	r27
+ 2dc:	af 91       	pop	r26
+ 2de:	9f 91       	pop	r25
+ 2e0:	8f 91       	pop	r24
+ 2e2:	7f 91       	pop	r23
+ 2e4:	6f 91       	pop	r22
+ 2e6:	5f 91       	pop	r21
+ 2e8:	4f 91       	pop	r20
+ 2ea:	3f 91       	pop	r19
+ 2ec:	2f 91       	pop	r18
+ 2ee:	0f 90       	pop	r0
+ 2f0:	0f be       	out	0x3f, r0	; 63
+ 2f2:	0f 90       	pop	r0
+ 2f4:	1f 90       	pop	r1
+ 2f6:	18 95       	reti
+
+000002f8 <__umulhisi3>:
+ 2f8:	a2 9f       	mul	r26, r18
+ 2fa:	b0 01       	movw	r22, r0
+ 2fc:	b3 9f       	mul	r27, r19
+ 2fe:	c0 01       	movw	r24, r0
+ 300:	a3 9f       	mul	r26, r19
+ 302:	70 0d       	add	r23, r0
+ 304:	81 1d       	adc	r24, r1
+ 306:	11 24       	eor	r1, r1
+ 308:	91 1d       	adc	r25, r1
+ 30a:	b2 9f       	mul	r27, r18
+ 30c:	70 0d       	add	r23, r0
+ 30e:	81 1d       	adc	r24, r1
+ 310:	11 24       	eor	r1, r1
+ 312:	91 1d       	adc	r25, r1
+ 314:	08 95       	ret
+
+00000316 <_exit>:
+ 316:	f8 94       	cli
+
+00000318 <__stop_program>:
+ 318:	ff cf       	rjmp	.-2      	; 0x318 <__stop_program>

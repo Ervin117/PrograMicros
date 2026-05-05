@@ -1,0 +1,43 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\Laboratorio 3\Laboratorio 3\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\Laboratorio 3\Laboratorio 3\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\M328PDEF.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\Laboratorio 3\Laboratorio 3\Debug\Laboratorio 3.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Laboratorio 3.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Laboratorio 3.map</FILE>
+  <FILE>Laboratorio 3.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <START><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\Laboratorio 3\Laboratorio 3\main.asm</FILE><LINE>19</LINE></START>
+  <INTER1><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\Laboratorio 3\Laboratorio 3\main.asm</FILE><LINE>78</LINE></INTER1>
+  <TMR0_7SEG1><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\Laboratorio 3\Laboratorio 3\main.asm</FILE><LINE>117</LINE></TMR0_7SEG1>
+  <TABLA7SEG><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\Laboratorio 3\Laboratorio 3\main.asm</FILE><LINE>16</LINE></TABLA7SEG>
+  <SETUP><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\Laboratorio 3\Laboratorio 3\main.asm</FILE><LINE>26</LINE></SETUP>
+  <INICIO><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\Laboratorio 3\Laboratorio 3\main.asm</FILE><LINE>71</LINE></INICIO>
+  <MAIN><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\Laboratorio 3\Laboratorio 3\main.asm</FILE><LINE>67</LINE></MAIN>
+  <INCREMENT><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\Laboratorio 3\Laboratorio 3\main.asm</FILE><LINE>96</LINE></INCREMENT>
+  <DECREMENT><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\Laboratorio 3\Laboratorio 3\main.asm</FILE><LINE>105</LINE></DECREMENT>
+  <OVER><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\Laboratorio 3\Laboratorio 3\main.asm</FILE><LINE>102</LINE></OVER>
+  <UNDER><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\Laboratorio 3\Laboratorio 3\main.asm</FILE><LINE>111</LINE></UNDER>
+  <TRST><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\Laboratorio 3\Laboratorio 3\main.asm</FILE><LINE>145</LINE></TRST>
+  <OVER1><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\Laboratorio 3\Laboratorio 3\main.asm</FILE><LINE>139</LINE></OVER1>
+  <FIN><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\Laboratorio 3\Laboratorio 3\main.asm</FILE><LINE>174</LINE></FIN>
+  <DIS1><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\Laboratorio 3\Laboratorio 3\main.asm</FILE><LINE>152</LINE></DIS1>
+  <DIS2><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\Laboratorio 3\Laboratorio 3\main.asm</FILE><LINE>164</LINE></DIS2>
+ </LABELS>
+</ASSEMBLER_INFO>

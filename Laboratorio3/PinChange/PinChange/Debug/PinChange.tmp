@@ -1,0 +1,35 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\PinChange\PinChange\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\PinChange\PinChange\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\M328PDEF.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\PinChange\PinChange\Debug\PinChange.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>PinChange.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>PinChange.map</FILE>
+  <FILE>PinChange.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <INICIO><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\PinChange\PinChange\main.asm</FILE><LINE>15</LINE></INICIO>
+  <INTER1><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\PinChange\PinChange\main.asm</FILE><LINE>56</LINE></INTER1>
+  <SETUP><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\PinChange\PinChange\main.asm</FILE><LINE>21</LINE></SETUP>
+  <MAIN><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\PinChange\PinChange\main.asm</FILE><LINE>51</LINE></MAIN>
+  <INCREMENT><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\PinChange\PinChange\main.asm</FILE><LINE>74</LINE></INCREMENT>
+  <DECREMENT><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\PinChange\PinChange\main.asm</FILE><LINE>83</LINE></DECREMENT>
+  <OVER><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\PinChange\PinChange\main.asm</FILE><LINE>80</LINE></OVER>
+  <UNDER><FILE>C:\Users\razer\OneDrive\Documentos\GitHub\Laboratorio3\PinChange\PinChange\main.asm</FILE><LINE>89</LINE></UNDER>
+ </LABELS>
+</ASSEMBLER_INFO>
